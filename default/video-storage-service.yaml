@@ -3,14 +3,8 @@ server:
 
 spring:
   application:
-    name: "video-storage-service"
+    name: video-storage-service
 
 yandex-api:
   oauth-token: y0_AgAAAABGVMkQAADLWwAAAAD0e36wiL8v8-SISMeCCEKFSq83IeJyy6c
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
