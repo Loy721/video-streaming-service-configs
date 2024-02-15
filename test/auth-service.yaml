@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    enabled: false
+
+spring:
+  cloud:
+    config:
+      enabled: false
+  liquibase:
+    change-log: db/changelog/db.changelog-master.xml
+  security:
+    secret: "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437"
+    token-life-minutes: 60
+  datasource:
+    url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1;NON_KEYWORDS=KEY,VALUE
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
