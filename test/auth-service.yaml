@@ -6,9 +6,6 @@ eureka:
     enabled: false
 
 spring:
-  cloud:
-    config:
-      enabled: false
   liquibase:
     change-log: db/changelog/db.changelog-master.xml
   security:
