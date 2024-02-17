@@ -29,8 +29,6 @@ springdoc:
     path: /swagger-ui
 
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
