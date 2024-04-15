@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: channel-service
+    name: "channel-service"
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   datasource:
@@ -18,12 +18,17 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-  security:
-    authorization-url: http://localhost:8081/current-user-info
-    authorization-channel-url: http://localhost:8081/signin-channel/
 
 springdoc:
   swagger-ui:
     path: /swagger-ui
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
