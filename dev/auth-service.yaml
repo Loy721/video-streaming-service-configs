@@ -5,7 +5,7 @@ spring:
   application:
     name: "auth-service"
   datasource:
-    url: jdbc:postgresql://localhost:5432/videostreaming_service_auth
+    url: jdbc:postgresql://auth-postgresdb:5432/videostreaming_service_auth
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
