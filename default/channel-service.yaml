@@ -6,7 +6,7 @@ spring:
     name: "channel-service"
   kafka:
     topic: warming-download-link
-    bootstrap-servers: kafka-broker:19092
+    bootstrap-servers: kafka-broker:9092
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   datasource:
