@@ -35,3 +35,7 @@ eureka:
       defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
   instance:
     preferIpAddress: true
+
+topic:
+  partitions: 3
+  replicas: 1
