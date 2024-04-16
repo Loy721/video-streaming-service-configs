@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: "video-storage-service"
+  kafka:
+    topic: updated-download-link
+    bootstrap-servers: localhost:9092
+
+topic:
+  partitions: 3
+  replicas: 1
 
 yandex-api:
   oauth-token: y0_AgAAAABGVMkQAADLWwAAAAD0e36wiL8v8-SISMeCCEKFSq83IeJyy6c
