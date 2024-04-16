@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: "channel-service"
+  kafka:
+    topic: warming-download-link
+    bootstrap-servers: kafka-broker:19092
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
   datasource:
@@ -32,3 +35,7 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+
+topic:
+  partitions: 3
+  replicas: 1
